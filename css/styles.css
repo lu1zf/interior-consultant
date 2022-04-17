@@ -38,7 +38,7 @@ nav #logo {
   top: -100vh;
   left: 0;
   background-color: var(--dark);
-  transition: .2s all;
+  transition: .3s all;
   width: 100vw;
   height: 100vh;
   z-index: 1;
@@ -64,7 +64,7 @@ nav #logo {
   color: var(--light);
   text-decoration: none;
   padding-bottom: 8px;
-  padding-top: 24px;
+  padding-top: 15px;
   transition: .2s all;
   border-bottom: 2px solid transparent;
 }
@@ -127,7 +127,7 @@ header a span {
 }
 
 #interior {
-  padding: 12px;
+  padding: 37px 12px 0 12px;
   width: 100%;
   position: relative;
 }
@@ -136,17 +136,18 @@ header a span {
   width: 100%;
 }
 
-#interior .card {
+.card {
   width: 300px;
   height: 138px;
-  left: 52px;
-  top: 245px;
-  position: absolute;
+  float: right;
+  margin-top: -36px;
+  margin-right: 12px;
   padding-top: 14px;
   padding-left: 23px;
 
+  position: relative;
   background: #181719;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
 
 .card__header {
@@ -214,4 +215,67 @@ footer a {
 
 footer a:hover {
   filter: brightness(.9);
+}
+
+@media screen and (min-width: 1120px) {
+  nav {
+    margin: 42px 77px 0 77px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #navbar {
+    position: unset;
+    width: unset;
+    height: unset;
+  }
+
+  #navbar #links {
+    flex-direction: row;
+  }
+
+  #links a {
+    margin-left: 86px;
+  }
+
+  #hamburguer {
+    display: none;
+  }
+
+  .wrapper {
+    display: flex;
+    padding: 0 77px;
+  }
+
+  header {
+    width: 45%;
+    margin-left: 0;
+    padding-top: 250px;
+  }
+
+  header h1 {
+    font-size: 48px;
+    line-height: 61px;
+  }
+
+  header #description {
+    width: 410px;
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  header a {
+    margin-top: 48px;
+  }
+
+  #interior {
+    width: 55%;
+    padding: 171px 0 0 0;
+  }
+
+  .card {
+    margin-right: 32px;
+  }
 }
