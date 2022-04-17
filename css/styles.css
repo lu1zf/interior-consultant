@@ -33,8 +33,55 @@ nav #logo {
   outline: 1px solid white;
 }
 
+#navbar {
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  background-color: var(--dark);
+  transition: .2s all;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar #links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+#links a {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--light);
+  text-decoration: none;
+  padding-bottom: 8px;
+  padding-top: 24px;
+  transition: .2s all;
+  border-bottom: 2px solid transparent;
+}
+
+#links a.selected {
+  border-bottom: 2px solid var(--light);
+}
+
+#hamburguer {
+  z-index: 2;
+  cursor: pointer;
+}
+
 #hamburguer span {
   font-size: 36px !important;
+  transition: .2s all !important;
+  z-index: 2 !important;
 }
 
 header {
